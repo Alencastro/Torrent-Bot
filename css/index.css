@@ -1,13 +1,22 @@
+
 header{
     background-color: rgb(51, 212, 51);
     width: 100%;
     height: 50px;
+    border-radius: 20px;
+    position: fixed;
+    width: 95%;
+    padding-left: 10px;
+}
+
+ul{
+    margin: 0px 0px;
+    padding-top: 10px ;
 }
 
 ul li{
     display: inline;
     padding-left: 120px;
-
 }
 
 ul li a{
@@ -19,4 +28,21 @@ ul li a{
 
 ul li a:hover{
     color: green;
+}
+
+#searchImg{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+#searchInput{
+    padding-left: 10px;
+}
+
+#serachInputDiv{
+    display: inline;
+    padding-left: 100px;
+    padding-right: 5px;
+    padding-top: -30px;
 }
