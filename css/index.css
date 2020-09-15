@@ -34,15 +34,23 @@ ul li a:hover{
     display: inline;
     margin: 0;
     padding: 0;
+    padding-left: -5px;
+    border-radius: 0 10px 10px 0;
 }
 
 #searchInput{
-    padding-left: 10px;
+    border-radius: 10px 0 0 10px;
+
 }
 
 #serachInputDiv{
     display: inline;
     padding-left: 100px;
-    padding-right: 5px;
-    padding-top: -30px;
 }
+
+.film{
+    
+    padding-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
