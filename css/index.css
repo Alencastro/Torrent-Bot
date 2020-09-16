@@ -1,28 +1,50 @@
-
+body{
+    background-color: rgb(21, 151, 55);
+}
 #searchBarDiv{
-    display: inline;
-    padding-left: 500px;
-    padding-top: 300px;
+    text-align: center;
+    width: 100%;
+    padding-top: 150px;
 }
 
 #searchBarInput{ 
-    padding-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 5px;
-    font-size: 27px;
-    border-radius: 10px 0 0 10px;
-    border: solid 1px black;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 3px 3px 3px 3px ;
+    border: none;
     text-transform:capitalize;
+    background-color: rgb(68, 202, 103);
+    color: white;
+    
+}
+
+#searchBarInput::placeholder{
+    color: rgba(230, 230, 230, 0.794);
 }
 
 #searchBarInput:focus{
-    background-color: rgb(182, 245, 182);
+    background-color: rgb(0, 91, 24);
+    color: white;
 }
 
-#searchBarImg{
-    position: absolute; 
-    border-radius: 0 10px 10px 0;
-    border: solid 1px black;
+#searchBarH1{
+    color: white;
+    font-size: 18px;
+    font-family: arial;
+}
+
+#searchBarButton{
+    font-size: 18px;
+    padding: 5px 134px 5px 134px;
+    color: rgb(0, 91, 24);
+    background-color: white;
+    border: none;
+    border-bottom: solid 2px rgb(0, 91, 24);
+    border-radius: 3px 3px 3px 3px;
+}
+
+#searchBarButton:hover{
+    cursor: pointer;
 }
 
 *:focus {

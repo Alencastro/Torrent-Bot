@@ -2,16 +2,21 @@
 <html lang="pt">
 
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torrent</title>
-    <link rel="stylesheet" href="/css/index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Torrent</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script src="/js/index.js"></script>
     </head>
 
     <body>
         <div id="searchBarDiv">
-            <input calss="serachBar" id="searchBarInput" type="text" placeholder="Pesquisar" spellcheck="false">
-            <img calss="serachBar" id="searchBarImg" src="/img/search.png" alt="" height="44" width="44"></button>
+            <h1 calss="searchBar" id="searchBarH1">Pesquisa</h1>
+            <br>
+            <input calss="searchBar" id="searchBarInput" type="text" placeholder="Escolha o título" spellcheck="false" 
+            size="30px"> 
+            <br><br>
+            <button id="searchBarButton" onclick=" getValues()">Procurar</button>
     </body>
 
 </html>
