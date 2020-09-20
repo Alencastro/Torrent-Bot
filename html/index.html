@@ -1,22 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="pt">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Torrent</title>
-        <link rel="stylesheet" href="/css/index.css">
-        <script src="/js/index.js"></script>
-    </head>
 
+        <link rel="stylesheet" href="/css/index.css">
+
+        <script src="/src/index.js"></script>
+
+    </head>
+    
     <body>
+
         <div id="searchBarDiv">
-            <h1 calss="searchBar" id="searchBarH1">Pesquisa</h1>
-            <br>
+            <h1 calss="searchBar" id="searchBarH1">Top Torrent</h1>
+                <br>
             <input calss="searchBar" id="searchBarInput" type="text" placeholder="Escolha o título" spellcheck="false" 
             size="30px"> 
-            <br><br>
-            <button id="searchBarButton" onclick=" getValues()">Procurar</button>
+                <br><br>
+            <button class="searchBar" id="searchBarButton" onclick="getValues()">Procurar</button>
+        </div>
+
+        <div id="">
+            <div class="filmsBox" id="viaTorrentFilms" >
+
+            </div>
+
+            <div class="filmsBox" id="viaTorrentDesenhos" >
+          
+            </div>
+
+            <div class="filmsBox" id="viaTorrentSeries" >
+          
+            </div>
+
+            <div class="filmsBox" id="comandoTorrentBiografias" >
+          
+            </div>
+
+        </div>
+
+        <script>
+            const bodyContent = document.querySelector('body')
+            let bar = document.createElement("div")
+
+            bar.style.height = "4px"
+            bar.style.width = "0px"
+            bar.style.backgroundColor = "rgb(156, 255, 186)"
+            bar.style.position = "fixed"
+            bar.style.top = "0"
+            bar.style.left = "0"
+            bar.style.zIndex = "9999"
+            bar.style.transition = "1s"
+
+            document.body.append(bar)
+
+            document.addEventListener("scroll", () => {
+                const pageHeigth = bodyContent.offsetHeight
+                const pagePositionY = window.pageYOffset
+
+                const updatedBar = pagePositionY * 100 / (pageHeigth-870) 
+
+                bar.style.width = updatedBar + "%"
+            })
+
+
+        </script>
+
+        <script>
+            async function createFilmsElements(jsonImgFileName, jsonLinkFileName, containerId, vzs) {
+                const responseUrls = await fetch(jsonImgFileName) 
+                const urls = await responseUrls.json()
+                const responseLinks = await fetch(jsonLinkFileName)
+                const links = await responseLinks.json() 
+                
+                const container = document.querySelector(containerId)
+                var div = []
+                var a = []
+                var img = []
+                
+                for (let c = 0; c < vzs; c++) {
+                    div.push(document.createElement('div'))
+                    container.appendChild(div[c])
+                    div[c].className = "filmsDivDiv"
+
+                    a.push(document.createElement('a'))
+                    div[c].appendChild(a[c])
+                    a[c].target = "_blank"
+                    a[c].href = `${links[c]}`
+
+                    img.push(document.createElement('img'))
+                    a[c].appendChild(img[c])
+                    img[c].className = "imgFilm"
+                    img[c].src = urls[c]
+                }
+            }
+            
+            createFilmsElements('/json/viaTorrentFilmsImg.json', '/json/viaTorrenFilmstLink.json', '#viaTorrentFilms', 20)
+            createFilmsElements('/json/viaTorrentFilmsImg1.json', '/json/viaTorrentFilmsLink1.json', '#viaTorrentFilms', 20)
+            createFilmsElements('/json/viaTorrentFilmsImg2.json', '/json/viaTorrentFilmsLink2.json', '#viaTorrentFilms', 20)
+
+            createFilmsElements('/json/viaTorrentDesenhosImg.json', '/json/viaTorrentDesenhosLink.json', '#viaTorrentDesenhos', 20)
+            createFilmsElements('/json/viaTorrentDesenhosImg1.json', '/json/viaTorrentDesenhosLink1.json', '#viaTorrentDesenhos', 20)
+            createFilmsElements('/json/viaTorrentDesenhosImg2.json', '/json/viaTorrentDesenhosLink2.json', '#viaTorrentDesenhos', 20)
+        
+            createFilmsElements('/json/viaTorrentSeriesImg.json', '/json/viaTorrentSeriesLink.json', '#viaTorrentSeries', 20)
+            createFilmsElements('/json/viaTorrentSeriesImg1.json', '/json/viaTorrentSeriesLink1.json', '#viaTorrentSeries', 20)
+            createFilmsElements('/json/viaTorrentSeriesImg2.json', '/json/viaTorrentSeriesLink2.json', '#viaTorrentSeries', 20)
+        
+            createFilmsElements('/json/comandoTorrentBiografiasImg.json', '/json/comandoTorrentBiografiasLink.json', '#comandoTorrentBiografias', 10)
+        </script>
+
+
     </body>
 
 </html>
