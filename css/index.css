@@ -12,11 +12,11 @@
 }
 
 body{
-    background-color: rgb(21, 151, 55);
+    background-color: white;
 }
 
 body::-webkit-scrollbar{
-    background-color: rgb(16, 133, 47);
+    background-color: rgb(230, 230, 230);
 }
 
 body::-webkit-scrollbar-thumb{
@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 #searchBarH1{
-    color: white;
+    color: rgb(21, 151, 55);
     font-size: 40px;
     font-weight: 350;
     font-family: 'Dosis', sans-serif;
@@ -80,10 +80,10 @@ body::-webkit-scrollbar-thumb:hover{
 #searchBarButton{
     font-size: 18px;
     width: 24.5%;
-    color: rgb(0, 91, 24);
-    background-color: white;
+    color: white;
+    background-color: rgb(0, 91, 24);
     border: none;
-    border-bottom: solid 2px rgb(0, 91, 24);
+    border-bottom: solid 2px rgb(0, 175, 47);
     border-radius: 3px 3px 3px 3px;
     font-family: 'Dosis', sans-serif;
 
@@ -124,7 +124,7 @@ body::-webkit-scrollbar-thumb:hover{
 .filmsDivDiv img{
     transform: scale(0.8);
     height: 430px;
-    border: solid 13px rgb(16, 133, 47);
+    border: solid 13px rgb(195, 195, 195);
 }
 
 .filmsDivDiv img:hover{
@@ -132,3 +132,27 @@ body::-webkit-scrollbar-thumb:hover{
     animation-fill-mode: forwards;
 }
 
+#boxThemButton{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.themButton{
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    margin: solid 1px rgb(128, 128, 128);
+    display: inline-block;
+    padding: 5px;
+}
+
+#blackThem{
+    background-color: black;
+    
+}
+#greenThem{
+    background-color: rgb(21, 151, 55);
+}
+#whiteThem{
+    background-color: white;
+}

@@ -125,36 +125,35 @@ const comandoTorrent = {
 }
 
 const call = () =>{
-    // viaTorrent.imgUrlScrape(0, 'json/viaTorrentFilmsImg.json')
-    // viaTorrent.imgUrlScrape(1, 'json/viaTorrentFilmsImg1.json')
-    // viaTorrent.imgUrlScrape(2, 'json/viaTorrentFilmsImg2.json')
+    viaTorrent.imgUrlScrape(0, 'json/viaTorrentFilmsImg.json')
+    viaTorrent.imgUrlScrape(1, 'json/viaTorrentFilmsImg1.json')
+    viaTorrent.imgUrlScrape(2, 'json/viaTorrentFilmsImg2.json')
 
-    // viaTorrent.linkScrape(0, 'json/viaTorrentFilmsLink.json')
-    // viaTorrent.linkScrape(1, 'json/viaTorrentFilmsLink1.json')
-    // viaTorrent.linkScrape(2, 'json/viaTorrentFilmsLink2.json')
+    viaTorrent.linkScrape(0, 'json/viaTorrentFilmsLink.json')
+    viaTorrent.linkScrape(1, 'json/viaTorrentFilmsLink1.json')
+    viaTorrent.linkScrape(2, 'json/viaTorrentFilmsLink2.json')
 
 
-    // viaTorrent.imgUrlScrape(3, 'json/viaTorrentDesenhosImg.json')
-    // viaTorrent.imgUrlScrape(4, 'json/viaTorrentDesenhosImg1.json')
-    // viaTorrent.imgUrlScrape(5, 'json/viaTorrentDesenhosImg2.json')
+    viaTorrent.imgUrlScrape(3, 'json/viaTorrentDesenhosImg.json')
+    viaTorrent.imgUrlScrape(4, 'json/viaTorrentDesenhosImg1.json')
+    viaTorrent.imgUrlScrape(5, 'json/viaTorrentDesenhosImg2.json')
 
-    // viaTorrent.linkScrape(3, 'json/viaTorrentDesenhosLink.json')
-    // viaTorrent.linkScrape(4, 'json/viaTorrentDesenhosLink1.json')
-    // viaTorrent.linkScrape(5, 'json/viaTorrentDesenhosLink2.json')
+    viaTorrent.linkScrape(3, 'json/viaTorrentDesenhosLink.json')
+    viaTorrent.linkScrape(4, 'json/viaTorrentDesenhosLink1.json')
+    viaTorrent.linkScrape(5, 'json/viaTorrentDesenhosLink2.json')
     
     
-    // viaTorrent.imgUrlScrape(6, 'json/viaTorrentSeriesImg.json')
-    // viaTorrent.imgUrlScrape(7, 'json/viaTorrentSeriesImg1.json')
-    // viaTorrent.imgUrlScrape(8, 'json/viaTorrentSeriesImg2.json')
+    viaTorrent.imgUrlScrape(6, 'json/viaTorrentSeriesImg.json')
+    viaTorrent.imgUrlScrape(7, 'json/viaTorrentSeriesImg1.json')
+    viaTorrent.imgUrlScrape(8, 'json/viaTorrentSeriesImg2.json')
 
-    // viaTorrent.linkScrape(6, 'json/viaTorrentSeriesLink.json')
-    // viaTorrent.linkScrape(7, 'json/viaTorrentSeriesLink1.json')
-    // viaTorrent.linkScrape(8, 'json/viaTorrentSeriesLink2.json')
+    viaTorrent.linkScrape(6, 'json/viaTorrentSeriesLink.json')
+    viaTorrent.linkScrape(7, 'json/viaTorrentSeriesLink1.json')
+    viaTorrent.linkScrape(8, 'json/viaTorrentSeriesLink2.json')
 
 
-    //comandoTorrent.imgUrlScrape(0, 'json/comandoTorrentBiografiasImg.json')
+    comandoTorrent.imgUrlScrape(0, 'json/comandoTorrentBiografiasImg.json')
     comandoTorrent.linkScrape(0, 'json/comandoTorrentBiografiasLink.json')
-    //baixarFilms.imgUrlScrape()
 }
 
 call()

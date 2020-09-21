@@ -5,15 +5,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Torrent</title>
+        <title>Top Torrent</title>
 
         <link rel="stylesheet" href="/css/index.css">
 
-        <script src="/src/index.js"></script>
+        <script src="/src/inputButton.js"></script>
 
     </head>
     
     <body>
+
+        <div id="boxThemButton">
+            <div class="themButton" id="whiteThem" onclick="whiteOnclick()"></div>
+            <div class="themButton" id="greenThem" onclick="greenOnclick()"></div>
+            <div class="themButton" id="blackThem" onclick="blackOnclick()"></div>
+        
+        </div>
 
         <div id="searchBarDiv">
             <h1 calss="searchBar" id="searchBarH1">Top Torrent</h1>
@@ -116,5 +123,7 @@
 
 
     </body>
+
+    <script src="/src/colorThem.js"></script>
 
 </html>
