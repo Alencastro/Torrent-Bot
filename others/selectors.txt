@@ -1,0 +1,10 @@
+viaTorrent:
+ img:
+    document.getElementsByClassName('capa_larga align-middle')[c].querySelector('img').src
+ link:
+    document.getElementsByClassName('capa_larga align-middle')[c].querySelector('a').href
+comandoTorrent:
+    img:
+        document.getElementsByClassName('entry-content cf')[c].querySelector('img').src
+    link:
+        document.getElementsByClassName('more-link')[c].href

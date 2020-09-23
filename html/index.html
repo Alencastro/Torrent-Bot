@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pt">
+<html lang="pt-BR">
 
     <head>
         <meta charset="UTF-8">
@@ -16,10 +16,9 @@
     <body>
 
         <div id="boxThemButton">
-            <div class="themButton" id="whiteThem" onclick="whiteOnclick()"></div>
-            <div class="themButton" id="greenThem" onclick="greenOnclick()"></div>
-            <div class="themButton" id="blackThem" onclick="blackOnclick()"></div>
-        
+            <div class="themButton" id="whiteThem" onclick="white()"></div>
+            <div class="themButton" id="greenThem" onclick="green()"></div>
+            <div class="themButton" id="blackThem" onclick="black()"></div>
         </div>
 
         <div id="searchBarDiv">
@@ -51,33 +50,6 @@
         </div>
 
         <script>
-            const bodyContent = document.querySelector('body')
-            let bar = document.createElement("div")
-
-            bar.style.height = "4px"
-            bar.style.width = "0px"
-            bar.style.backgroundColor = "rgb(156, 255, 186)"
-            bar.style.position = "fixed"
-            bar.style.top = "0"
-            bar.style.left = "0"
-            bar.style.zIndex = "9999"
-            bar.style.transition = "1s"
-
-            document.body.append(bar)
-
-            document.addEventListener("scroll", () => {
-                const pageHeigth = bodyContent.offsetHeight
-                const pagePositionY = window.pageYOffset
-
-                const updatedBar = pagePositionY * 100 / (pageHeigth-870) 
-
-                bar.style.width = updatedBar + "%"
-            })
-
-
-        </script>
-
-        <script>
             async function createFilmsElements(jsonImgFileName, jsonLinkFileName, containerId, vzs) {
                 const responseUrls = await fetch(jsonImgFileName) 
                 const urls = await responseUrls.json()
@@ -101,6 +73,11 @@
 
                     img.push(document.createElement('img'))
                     a[c].appendChild(img[c])
+                    img[c].className = "imgFilmBack"
+                    img[c].src = urls[c]
+
+                    img.push(document.createElement('img'))
+                    a[c].appendChild(img[c])
                     img[c].className = "imgFilm"
                     img[c].src = urls[c]
                 }
@@ -121,9 +98,14 @@
             createFilmsElements('/json/comandoTorrentBiografiasImg.json', '/json/comandoTorrentBiografiasLink.json', '#comandoTorrentBiografias', 10)
         </script>
 
+        <footer>
+            ola
+        </footer>
 
     </body>
-
+    
     <script src="/src/colorThem.js"></script>
+
+    <script src="/src/readerMarkBar.js"></script>
 
 </html>
