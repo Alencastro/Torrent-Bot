@@ -22,6 +22,7 @@ function green() {
         colorThem.elements[c].style.transition = '5s'
         colorThem.elements[5].style.color = colorThem.h1Color.green 
         colorThem.elements[5].style.transition = '5s' 
+        document.querySelector('#searchBarButton').style.color = 'rgb(21, 151, 55)'
     }
 }
 
@@ -31,6 +32,8 @@ function black() {
         colorThem.elements[c].style.transition = '5s'
         colorThem.elements[5].style.color = colorThem.h1Color.black 
         colorThem.elements[5].style.transition = '5s' 
+        document.querySelector('#searchBarButton').style.color = 'white'
+
     }
 }
 
@@ -40,5 +43,6 @@ function white() {
         colorThem.elements[c].style.transition = '5s'
         colorThem.elements[5].style.color = colorThem.h1Color.white 
         colorThem.elements[5].style.transition = '5s' 
+        document.querySelector('#searchBarButton').style.color = 'white'
     }
 }

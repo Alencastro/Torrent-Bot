@@ -14,12 +14,6 @@
     }
 }
 
-@keyframes themAnime{
-    to{
-        transform: scale(0.8);
-    }
-}
-
 body{
     background-color: white;
 }
@@ -153,10 +147,13 @@ body::-webkit-scrollbar-thumb:hover{
     margin: solid 1px rgb(128, 128, 128);
     display: inline-block;
     padding: 5px;
+    transition: 0.5s;
+    
 }
-
+ 
 .themButton:hover{
-    animation: themAnime 0.5s forwards;
+    transform: scale(0.8);
+    transition: 0.6s;
 }
 
 #blackThem{
