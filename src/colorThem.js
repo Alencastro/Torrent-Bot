@@ -1,48 +1,74 @@
-const colorThem = {
-    elements: [
-        document.querySelector('body'), document.querySelector('#searchBarInput'), document.querySelector('#searchBarButton'), document.querySelector('.imgFilm'), document.styleSheets[0].cssRules[4].cssText, document.querySelector('#searchBarH1') 
-    ],
+let body = document.querySelector('body')
+let searchBarH1 = document.querySelector('#searchBarH1')
+let searchBarInput = document.querySelector('#searchBarInput')
+let searchBarButton = document.querySelector('#searchBarButton')
+let imgFilm = document.querySelector('.imgFilm')
+let bodyScrollBackground = document.styleSheets[0].cssRules[4]
+let filmBoxScrollThum = document.styleSheets[0].cssRules[21]
 
-    backgrounds :{
-        white: ['white', 'rgb(68, 202, 103)', 'rgb(0, 91, 24)', 'rgb(210, 210, 210)', 'rgb(21, 151, 55)',],
-        green : ['rgb(21, 151, 55)',  'rgb(68, 202, 103)', 'white', 'rgb(11, 141, 45)', 'white', ],
-        black: ['black', 'rgb(150, 150, 150)', 'rgb(150, 150, 150)', 'rgb(20, 20, 20)', 'white',]
-    },
+const green = () =>{
+    body.style.backgroundColor = "rgb(21, 151, 55)"
+    body.style.transition = "3s"
 
-    h1Color: {
-        white: 'rgb(0, 91, 24)',
-        green: 'white',
-        black: 'white'
-    }
+    searchBarH1.style.color = "white"
+    searchBarH1.style.transition = "3s"
+
+    searchBarInput.style.backgroundColor = "rgb(68, 202, 103)"
+    searchBarInput.style.transition = "3s"
+
+    searchBarButton.style.backgroundColor = "white"
+    searchBarButton.style.transition = "3s"
+
+    searchBarButton.style.color = "rgb(0, 91, 24)"
+    searchBarButton.style.transition = "3s"
+
+
+    bodyScrollBackground.style.backgroundColor = 'rgb(11, 141, 45)'
+
+    filmBoxScrollThum.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
 }
 
-function green() {
-    for (let c = 0; c < colorThem.elements.length; c++) {
-        c < 6 ? colorThem.elements[c].style.backgroundColor = colorThem.backgrounds.green[c] : null
-        colorThem.elements[c].style.transition = '5s'
-        colorThem.elements[5].style.color = colorThem.h1Color.green 
-        colorThem.elements[5].style.transition = '5s' 
-        document.querySelector('#searchBarButton').style.color = 'rgb(21, 151, 55)'
-    }
-}
+const black = () => {
+    body.style.backgroundColor = "black"
+    body.style.transition = "3s"
 
-function black() {
-    for (let c = 0; c < colorThem.elements.length; c++) {
-        c < 6 ? colorThem.elements[c].style.backgroundColor = colorThem.backgrounds.black[c] : null
-        colorThem.elements[c].style.transition = '5s'
-        colorThem.elements[5].style.color = colorThem.h1Color.black 
-        colorThem.elements[5].style.transition = '5s' 
-        document.querySelector('#searchBarButton').style.color = 'white'
+    searchBarH1.style.color = "white"
+    searchBarH1.style.transition = "3s"
 
-    }
-}
+    searchBarInput.style.backgroundColor = "rgb(150, 150, 150)"
+    searchBarInput.style.transition = "3s"
 
-function white() {
-    for (let c = 0; c < colorThem.elements.length; c++) {
-        c < 6 ? colorThem.elements[c].style.backgroundColor = colorThem.backgrounds.white[c] : null 
-        colorThem.elements[c].style.transition = '5s'
-        colorThem.elements[5].style.color = colorThem.h1Color.white 
-        colorThem.elements[5].style.transition = '5s' 
-        document.querySelector('#searchBarButton').style.color = 'white'
-    }
+    searchBarButton.style.backgroundColor = "rgb(150, 150, 150)"
+    searchBarButton.style.transition = "3s"
+
+    searchBarButton.style.color = "white"
+    searchBarButton.style.transition = "3s"
+
+
+    bodyScrollBackground.style.backgroundColor = 'rgb(20, 20, 20)'
+
+    filmBoxScrollThum.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
+} 
+
+const white = () => {
+    body.style.backgroundColor = "white"
+    body.style.transition = "3s"
+
+    searchBarH1.style.color = "rgb(68, 202, 103)"
+    searchBarH1.style.transition = "3s"
+
+    searchBarInput.style.backgroundColor = "rgb(68, 202, 103)"
+    searchBarInput.style.transition = "3s"
+
+    searchBarButton.style.backgroundColor = " rgb(0, 91, 24)"
+    searchBarButton.style.transition = "3s"
+
+    searchBarButton.style.color = "white"
+    searchBarButton.style.transition = "3s"
+
+    
+    bodyScrollBackground.style.backgroundColor = 'rgb(210, 210, 210)'
+
+    filmBoxScrollThum.style.backgroundColor = 'rgba(68, 202, 103, 0.5)'
+
 }

@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb:hover{
     text-align: center;
     width: 100%;
     padding-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 12%;
 }
 
 #searchBarInput{ 
@@ -109,13 +109,22 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .filmsBox{  
-    max-height: 450px;
+    max-height: 100%;
     display: flex;
-    overflow: auto;
+
+    overflow-x: scroll;
 }
 
 .filmsBox::-webkit-scrollbar{
-    width: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.filmsBox::-webkit-scrollbar-button{
+    display: none;
+}
+
+.filmsBox::-webkit-scrollbar-thumb{
+    background-color: rgba(43, 199, 22, 0.431);
 }
 
 .filmsDivDiv{
