@@ -1,16 +1,16 @@
 const bodyContent = document.querySelector('body')
-let topBar = document.createElement("div")
+let readerMarker = document.createElement("div")
 
-topBar.style.height = "4px"
-topBar.style.width = "0px"
-topBar.style.backgroundColor = "rgb(21, 151, 55)"
-topBar.style.position = "fixed"
-topBar.style.top = "0"
-topBar.style.left = "0"
-topBar.style.zIndex = "9999"
-topBar.style.transition = "1s"
+readerMarker.style.height = "4px"
+readerMarker.style.width = "0px"
+readerMarker.style.backgroundColor = "rgb(68, 202, 103)"
+readerMarker.style.position = "fixed"
+readerMarker.style.top = "0"
+readerMarker.style.left = "0"
+readerMarker.style.zIndex = "9999"
+readerMarker.style.transition = "1s"
 
-document.body.append(topBar)
+document.body.append(readerMarker)
 
 document.addEventListener("scroll", () => {
     const pageHeigth = bodyContent.offsetHeight
@@ -18,6 +18,6 @@ document.addEventListener("scroll", () => {
 
     const updatedtopBar = pagePositionY * 100 / (pageHeigth-870) 
 
-    topBar.style.width = updatedtopBar + "%"
+    readerMarker.style.width = updatedtopBar + "%"
 })
 

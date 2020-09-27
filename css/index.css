@@ -118,7 +118,6 @@ body::-webkit-scrollbar-thumb:hover{
 .filmsBox::-webkit-scrollbar{
     background-color: rgba(255, 255, 255, 0);
 }
-
 .filmsBox::-webkit-scrollbar-button{
     display: none;
 }
@@ -150,8 +149,8 @@ body::-webkit-scrollbar-thumb:hover{
 }
 
 .themButton{
-    height: 30px;
-    width: 30px;
+    height: 80%;
+    width: 5%;
     border-radius: 4px;
     margin: solid 1px rgb(128, 128, 128);
     display: inline-block;

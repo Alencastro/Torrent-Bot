@@ -26,6 +26,8 @@ const green = () =>{
     bodyScrollBackground.style.backgroundColor = 'rgb(11, 141, 45)'
 
     filmBoxScrollThum.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
+
+    readerMarker.style.backgroundColor = 'white'
 }
 
 const black = () => {
@@ -48,6 +50,8 @@ const black = () => {
     bodyScrollBackground.style.backgroundColor = 'rgb(20, 20, 20)'
 
     filmBoxScrollThum.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'
+
+    readerMarker.style.backgroundColor = 'white'
 } 
 
 const white = () => {
@@ -71,4 +75,5 @@ const white = () => {
 
     filmBoxScrollThum.style.backgroundColor = 'rgba(68, 202, 103, 0.5)'
 
+    readerMarker.style.backgroundColor = 'rgb(68, 202, 103)'
 }
